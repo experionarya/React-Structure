@@ -1,0 +1,12 @@
+{
+  "plugins": ["prettier", "react"],
+  "extends": ["prettier", "prettier/react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "no-cond-assign": ["error", "always"],
+    "eqeqeq": ["error", "allow-null"]
+  }
+}
