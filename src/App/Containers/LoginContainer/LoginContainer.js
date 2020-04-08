@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-export default class LoginContainer extends Component {
-  
 
+export default class LoginContainer extends Component {
   render() {
-    
-    return (
-      <div>heloo</div>
-    );
+    return <div>heloo</div>;
   }
 }
