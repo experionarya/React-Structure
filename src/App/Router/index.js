@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
+import LoginContainer from "../Containers/LoginContainer";
 class AppRouter extends Component {
   render() {
     return (
       <Switch>
-        {/* <Route path="/" exact component={LoginContainer} /> */}
+        <Route path="/" exact component={LoginContainer} />
       </Switch>
     );
   }

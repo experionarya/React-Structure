@@ -26,11 +26,11 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const sagaMiddleware = createSagaMiddleware();
 // configure store with an initial state
 function configureStore(initialState) {
-  // const enhancer = compose(applyMiddleware(loggerMiddleware, sagaMiddleware));
-  const enhancer =
-    process.env.REACT_APP_DEV === "true"
-      ? compose(applyMiddleware(loggerMiddleware, sagaMiddleware))
-      : compose(applyMiddleware(sagaMiddleware));
+  const enhancer = compose(applyMiddleware(loggerMiddleware, sagaMiddleware));
+  // const enhancer =
+  //   process.env.REACT_APP_DEV === "true"
+  //     ? compose(applyMiddleware(loggerMiddleware, sagaMiddleware))
+  //     : compose(applyMiddleware(sagaMiddleware));
   return createStore(persistedReducer, initialState, enhancer);
 }
 const store = configureStore({});
